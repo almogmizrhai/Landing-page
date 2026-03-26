@@ -2,7 +2,6 @@
 
 .hero {
   height: 65vh;
-  margin: 40px 0px;
   background: var(--black);
   color: var(--white);
   display: flex;
@@ -23,7 +22,11 @@
         gap: 10px;
         justify-items: center;
         margin: 40px 0px;
-        
+
+        p{
+            text-align: center;
+        }
+
         a{
             border: 2px solid var(--gold);
             background-color: var(--gold);
