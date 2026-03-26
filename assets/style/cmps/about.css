@@ -5,4 +5,45 @@
     gap: 10px;
     justify-items: center;
     margin: 40px 10px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        "title title"
+        "img text";
+    align-items: center;
+    justify-items: center;
+
+    h2{
+        grid-area: title;
+        padding: 20px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    img {
+        grid-area: img;
+        width: 194px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    
+    p {
+        border-right: 2px solid var(--gold);
+        grid-area: text;
+        padding: 10px; 
+    }
+    
+    /* טלפון */
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "title"
+        "img"
+        "text";
+        
+        p{
+            border-right:none;
+            border-top: 2px solid var(--gold);
+            padding: 10px;    
+        }   
+    }
 }
