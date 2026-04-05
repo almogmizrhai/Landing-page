@@ -21,13 +21,28 @@ function scrollCarousel(dir) {
 // Form submit
 function submitForm(formId, successId) {
     const form = document.getElementById(formId)
+    // console.log('form:', form)
+    
+    // בדיקת שדות
     const inputs = form.querySelectorAll('input, select')
     let valid = true
-    inputs.forEach(i => { if (!i.value) valid = false; })
-        if (!valid) { alert('אנא מלא/י את כל השדות'); return }
-    form.querySelectorAll('input, select').forEach(i => i.style.opacity = '0.5')
-    form.querySelector('button').style.opacity = '0.5'
-    document.getElementById(successId).style.display = 'block'
+    inputs.forEach(i => { 
+        // console.log('input:', i.value)
+        if (!i.value) valid = false 
+    })
+    if (!valid) { alert('אנא מלא/י את כל השדות'); return }
+
+    // טשטוש שדות
+    inputs.forEach(i => i.style.opacity = '0.5')
+
+    // ← מחפש את הכפתור לפי class במקום תג
+    const btn = form.querySelector('.btn-submit')
+    if (btn) btn.style.opacity = '0.5'
+
+    // הצגת הודעת הצלחה
+    const successEl = document.getElementById(successId)
+    // console.log('successEl:', successEl)
+    if (successEl) successEl.classList.add ('show')
 }
 
 // Scroll reveal

@@ -126,20 +126,24 @@
   </section>
 
   <!-- 4. CONTACT FORM -->
-  <section class="contact fade-in" id="contact">
+  <section class="contact fade-in" id="contact1">
     <h2>הגעת עד לכאן - כנראה שזה הזמן להתחיל</h2>
     <p>השאירו פרטים ונחזור אליכם עם כל המידע על האימנים והתוכניות שלנו.</p>
     <div class="form-inner" id="form1">
       <input type="text" placeholder="שם מלא" required />
-      <input type="tel" placeholder="טלפון" required />
+      <input type="tel" placeholder="טלפון" pattern="[0-9]{3}-[0-9]{7}" required />
       <input type="number" placeholder="גיל" min="1" max="99" required />
       <select>
         <option value="" disabled selected>מין</option>
         <option value="male" >זכר</option>
         <option value="female" >נקבה</option>
       </select>
-      <button class="btn-submit" onclick="submitForm('form1', 'success')">שלחו פרטים</button>
-      <div class="success-msg" id="success1">תודה! ניצור איתך קשר בקרוב 💪</div>
+      <button class="btn-submit" onclick="submitForm('form1', 'success1')">שלחו פרטים</button>
+      <div class="success-msg" id="success1">ברוך/ה הבא/ה! 💪
+        <br>
+        הפרטים התקבלו ואנחנו ניצור איתך קשר בקרוב כדי להתחיל את התהליך.
+        <br>
+        הצעד הראשון כבר מאחוריך 😉🔥</div>
     </div>
   </section>
   
@@ -159,12 +163,12 @@
   </section>
   
   <!-- 8. CONTACT FORM -->
-  <section class="contact fade-in" id="contact">
+  <section class="contact fade-in" id="contact2">
     <h2>הגעת עד לכאן - לא תשאיר\י פרטים?</h2>
     <p>השאירו פרטים ונחזור אליכם עם כל המידע על האימנים והתוכניות שלנו.</p>
-    <div class="form-inner" id="form1">
+    <div class="form-inner" id="form2">
       <input type="text" placeholder="שם מלא" required />
-      <input type="tel" placeholder="טלפון" required />
+      <input type="tel" placeholder="טלפון" pattern="[0-9]{3}-[0-9]{7}" required />
       <input type="number" placeholder="גיל" min="1" max="99" required />
       <select>
         <option value="" disabled selected>מין</option>
@@ -172,7 +176,11 @@
         <option value="female" >נקבה</option>
       </select>
       <button class="btn-submit" onclick="submitForm('form2', 'success2')">שלחו פרטים</button>
-      <div class="success-msg" id="success2">תודה! ניצור איתך קשר בקרוב 💪</div>
+      <div class="success-msg" id="success2">איזה כיף שפנית אלינו! 🔥
+        <br>
+        הפרטים התקבלו ואנחנו ניצור איתך קשר ממש בקרוב
+        <br>
+        תתכונן/י – הולכים לעבוד 💪</div>
     </div>
   </section>
   

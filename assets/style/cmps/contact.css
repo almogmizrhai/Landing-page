@@ -38,6 +38,10 @@
             text-align: right;
             direction: rtl;
             transition: border-color 0.2s;
+
+            &:hover{
+                border-color: var(--gold);
+            }
         }
 
         .btn-submit{
@@ -53,13 +57,17 @@
             transition: background 0.25s, transform 0.2s;
             margin-top: 8px;
         }
-        
+
         .success-msg{
             display: none;
-            color: var(--gold);
-            text-align: center;
-            font-weight: 700;
-            padding: 12px;
+            
+            &.show{
+                display: block;
+                color: var(--gold);
+                text-align: center;
+                font-weight: 700;
+                padding: 12px;
+            }
         }
     }
 }
