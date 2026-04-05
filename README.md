@@ -78,7 +78,137 @@ jordan-pro/
 ```
 https://jordan-pro.netlify.app
 ```
+# Jordan PRO 🏋️ — דף נחיתה
 
+דף נחיתה למתחם כושר Jordan PRO במעלה אדומים.  
+בנוי עם HTML, CSS ו-JavaScript טהור — ללא frameworks.
+
+---
+
+## מבנה הפרויקט
+
+```
+jordan-pro/
+├── index.html        ← דף ראשי
+├── main.css          ← כל העיצוב
+├── script.js         ← לוגיקה ו-JavaScript
+└── assets/
+    └── images/
+        ├── logo.jpg
+        ├── hero-bg.jpg
+        ├── icon-group.png
+        ├── icon-personal.png
+        ├── icon-food.png
+    └──results/ 
+        ├── result1.jpg
+        ├── result2.jpg
+        ├── result3.jpg
+        ├── result4.jpg
+    └──posts/
+        ├── post1.jpg
+        ├── post2.jpg
+        ├── post3.jpg
+        ├── post4.jpg
+        └── post5.jpg
+```
+
+---
+
+## סקשנים בדף
+
+| # | סקשן | סטטוס | תיאור |
+|---|------|--------|-------|
+| 1 | Hero | ✅ הושלם | תמונת רקע + כותרת + כפתור CTA |
+| 2 | About | ✅ הושלם | קצת עלינו + לוגו |
+| 3 | Services | ✅ הושלם | 3 כרטיסיות accordion — קבוצתי / אישי / תזונה |
+| 4 | Contact | ✅ הושלם | טופס ליד ראשון + שליחה לוואטסאפ |
+| 5 | Testimonials | 🔄 בתהליך | שיחות וואטסאפ של לקוחות מרוצים |
+| 6 | Results | ✅ הושלם | carousel תמונות לפני/אחרי |
+| 7 | Trainers | ⏳ טרם הושלם | כרטיסי מאמנים |
+| 8 | Contact | ✅ הושלם | טופס ליד שני + שליחה לוואטסאפ |
+| 9 | More Info | ✅ הושלם | carousel קישורי פוסטים מאינסטגרם |
+| 10 | Footer | ✅ הושלם | קרדיט + אייקוני טלפון, וואטסאפ, אינסטגרם, פייסבוק |
+
+---
+
+## טכנולוגיות
+
+- **HTML5** — מבנה הדף, סמנטיקה, RTL
+- **CSS3** — Grid, Flexbox, CSS Nesting, CSS Variables, Animations
+- **JavaScript** — vanilla JS, accordion, carousel, form submission
+- **Google Fonts** — Heebo + Bebas Neue
+
+---
+
+## צבעי המותג
+
+```css
+--gold:       #c8874a   /* כתום — צבע ראשי */
+--gold-light: #e8a568   /* כתום בהיר — hover */
+--black:      #0a0a0a   /* שחור רקע */
+--dark:       #111111   /* שחור כרטיסיות */
+--beige:      #f0ede8   /* בז' — סקשנים בהירים */
+--text-muted: #888888   /* טקסט משני */
+```
+
+---
+
+## פונקציות JavaScript
+
+| פונקציה | תיאור |
+|---------|--------|
+| `toggleService(card)` | פתיחה/סגירה של כרטיסיות השירותים |
+| `submitForm(formId, successId)` | הגשת טופס ליד + שליחה לוואטסאפ |
+| `scrollResults(dir)` | גלילה ב-carousel של תוצאות מהשטח |
+| `scrollMore(dir)` | גלילה ב-carousel של אולי יעניין אותך |
+| `IntersectionObserver` | אנימציית fade-in על גלילה |
+
+---
+
+## קישורים חיצוניים — לעדכן
+
+| שירות | מה לעדכן |
+|--------|----------|
+| WhatsApp | החלף `972501234567` במספר האמיתי |
+| Instagram | החלף `YOUR_USERNAME` בשם המשתמש |
+| Facebook | החלף `YOUR_PAGE` בשם הדף |
+| Instagram posts | החלף `YOUR_POST_ID` ב-ID של כל פוסט |
+
+---
+
+## הרצת הפרויקט
+
+1. פתח את התיקייה ב-VS Code
+2. התקן את תוסף **Live Server**
+3. לחץ לחיצה ימנית על `index.html` ← **Open with Live Server**
+4. הדפדפן יפתח אוטומטית על `localhost:5500`
+
+---
+
+## פרסום
+
+הדף מתארח על **Netlify** — drag & drop של תיקיית הפרויקט.
+
+```
+https://jordan-pro.netlify.app
+```
+
+---
+
+## מה עוד נשאר לבנות
+
+- [ ] סקשן Testimonials — להוסיף שיחות וואטסאפ אמיתיות מלקוחות
+- [ ] סקשן Trainers — כרטיסי מאמנים עם תמונות אמיתיות
+- [ ] תמונות אמיתיות — לפני/אחרי + פוסטים מאינסטגרם
+- [ ] טופס — חיבור ל-Google Sheets לשמירת לידים
+- [ ] Responsive — בדיקה ותיקונים למובייל
+- [ ] SEO — meta tags, og:image, description
+
+---
+
+## גרסה
+
+`v0.3.0` — רוב הסקשנים הושלמו, נשאר Trainers + תמונות אמיתיות
 ---
 
 ## מה עוד נשאר לבנות
@@ -92,7 +222,3 @@ https://jordan-pro.netlify.app
 - [ ] Responsive — התאמה למובייל
 
 ---
-
-## גרסה
-
-`v0.1.0` — עבודה בתהליך
