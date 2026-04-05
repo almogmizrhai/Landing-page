@@ -211,14 +211,3 @@ https://jordan-pro.netlify.app
 `v0.3.0` — רוב הסקשנים הושלמו, נשאר Trainers + תמונות אמיתיות
 ---
 
-## מה עוד נשאר לבנות
-
-- [ ] טופס ליד — חיבור ל-WhatsApp + Google Sheets
-- [ ] סקשן Testimonials — כרטיסי ביקורות
-- [ ] סקשן Results — גריד לפני/אחרי
-- [ ] סקשן Trainers — כרטיסי מאמנים
-- [ ] Carousel — אולי יעניין אותך
-- [ ] Footer — אייקוני Instagram, Facebook, WhatsApp
-- [ ] Responsive — התאמה למובייל
-
----
