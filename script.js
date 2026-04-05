@@ -1,4 +1,4 @@
-// main j
+// main js
 
 // active cards
 function toggleService(card) {

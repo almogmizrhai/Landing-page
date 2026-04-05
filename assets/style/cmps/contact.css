@@ -53,5 +53,13 @@
             transition: background 0.25s, transform 0.2s;
             margin-top: 8px;
         }
+        
+        .success-msg{
+            display: none;
+            color: var(--gold);
+            text-align: center;
+            font-weight: 700;
+            padding: 12px;
+        }
     }
 }
