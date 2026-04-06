@@ -2,11 +2,128 @@
 
 .reviews{
     padding: 80px 24px;
+    text-align: center;
 
     .section-title{
         font-size: 26px;
         font-weight: 800;
         margin-bottom: 48px;
         text-align: center;
+    }
+
+    .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        max-width: 1100px;
+        margin: 0 auto;
+    
+        @media (max-width: 900px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    
+        @media (max-width: 600px) {
+            grid-template-columns: 1fr;
+        }
+
+        /* ── כרטיס הטלפון ── */
+        .wa-chat {
+            background: var(--black);
+            border-radius: 20px;
+            overflow: hidden;
+            text-align: right;
+            border: 1px solid var(--black);
+        }
+        
+        /* ── Header ── */
+        .wa-header {
+            background: var(--black);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--black);
+        }
+        
+        .wa-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+        
+        .wa-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            text-align: right;
+        }
+        
+        .wa-name {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--white);
+        }
+        
+        .wa-tag {
+            font-size: 11px;
+            color: var(--gold-light);
+        }
+        
+        /* ── הודעות ── */
+        .wa-messages {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            min-height: 160px;
+        }
+        
+        .wa-bubble {
+            max-width: 85%;
+            padding: 10px 14px;
+            font-size: 13px;
+            line-height: 1.5;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        
+        /* הודעה נכנסת — מהלקוח */
+        .wa-in {
+            background: var(--black);
+            color: var(--text-muted);
+            border-radius: 14px 14px 14px 2px;
+            align-self: flex-start;
+        }
+        
+        /* הודעה יוצאת — מהמתחם */
+        .wa-out {
+            background: var(--black);
+            color: var(--text-muted);
+            border-radius: 14px 14px 2px 14px;
+            align-self: flex-end;
+            text-align: left;
+        }
+        
+        .wa-stars {
+            color: var(--gold-light);
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+        
+        .wa-time {
+            font-size: 10px;
+            color: var(--text-muted);
+            align-self: flex-end;
+        }
     }
 }
