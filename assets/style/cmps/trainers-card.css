@@ -14,7 +14,7 @@
         display: flex;
         flex-direction: column;
         gap: 24px;
-        max-width: 680px;
+        max-width: 250px;
         margin: 0 auto;
 
         .trainer-card{
@@ -26,9 +26,9 @@
 
             .trainer-img{
                 width: 100%;
-                height: 340px;
+                aspect-ratio: 3 / 4;
                 object-fit: cover;
-                object-position: top;
+                object-position: center;
                 display: block;
                 background: var(--text-muted);
             }
