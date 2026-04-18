@@ -32,6 +32,7 @@
 
     .ba-card {
         min-width: 280px;
+        max-width: 280px; 
         background: var(--black);
         border: 1px solid var(--text-muted);
         border-radius: 14px;
@@ -71,7 +72,8 @@
 
         .ba-img {
             width: 100%;
-            flex: 1;
+            height: 320px;
+            flex: none;
             object-fit: cover;
             border-radius: 8px;
         }
