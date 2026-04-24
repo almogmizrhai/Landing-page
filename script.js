@@ -60,7 +60,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Jordan Pro Leads
 const MY_WHATSAPP = '972503777486'  
-const SHEET_URL   = 'https://script.google.com/macros/s/AKfycbzGS1F85y8ycVpMrxEXH4QnXSaPQHHO2w0b5wbnlNMbcaHDF5c8eTN4v_S152ltfoZX/exec' 
+const SHEET_URL   = 'https://script.google.com/macros/s/AKfycbzb7_LJEfzrhjRRob_9MeFcnws6OycEmnjZ3d_S88rYAoAS8hlBPLaeeXpH828usH_J/exec' 
 
 async function submitForm(formId, successId) {
     const form = document.getElementById(formId)
@@ -70,10 +70,16 @@ async function submitForm(formId, successId) {
     const phone  = form.querySelector('input[type="tel"]').value.trim()
     const age    = form.querySelector('input[type="number"]').value.trim()
     const gender = form.querySelector('select').value
+    const email  = form.querySelector('input[type="email"]').value.trim()
+
+    // שדות טקסט לפי סדר — מטרה ואיך הגיע
+    const textInputs = form.querySelectorAll('input[type="text"]')
+    const goal   = textInputs[1]?.value.trim() || ''  // שדה טקסט שני
+    const source = textInputs[2]?.value.trim() || ''  // שדה טקסט שלישי
 
     // וידוא שדות חובה
     if (!name || !phone) {
-        alert('אנא מלא/י שם וטלפון')
+        alert('אנא מלא/י את כל הפרטים')
         return
     }
 
@@ -82,7 +88,7 @@ async function submitForm(formId, successId) {
         await fetch(SHEET_URL, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name, phone, age, gender }),
+            body: JSON.stringify({ name, phone, age, gender, email, goal, source }),
             mode: 'no-cors'
         })
         console.log('✓ נשמר ב-Google Sheets')
@@ -92,11 +98,14 @@ async function submitForm(formId, successId) {
 
     // ── פתח WhatsApp ──
     const msg = [
-        `🏋️  מתאמן\ת חדש\ה– Jordan PRO`,
+        `🏋️Jordan PRO`,
         `👤 שם: ${name}`,
         `📱 טלפון: ${phone}`,
-        age    ? `🎂 גיל: ${age}`    : '',
-        gender ? `⚧ מין: ${gender}` : '',
+        age    ? `🎂 גיל: ${age}`         : '',
+        gender ? `⚧ מין: ${gender}`       : '',
+        email  ? `📧 מייל: ${email}`       : '',
+        goal   ? `🎯 מטרה: ${goal}`        : '',
+        source ? `📣 הגיע דרך: ${source}`  : '',
         `📅 ${new Date().toLocaleString('he-IL')}`,
     ].filter(Boolean).join('\n')
 
